@@ -1,0 +1,4 @@
+- name: started
+  service:
+    name: qmail
+    state: started

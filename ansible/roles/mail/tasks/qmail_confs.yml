@@ -1,0 +1,4 @@
+---
+- name: qmail_config
+  template: src=aliases.conf.j2 dest=/etc/aliases
+  notify: qmail_reload

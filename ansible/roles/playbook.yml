@@ -1,0 +1,8 @@
+---
+# mailserver config
+## note: 'default' is what ansible-vagrant provisioner calls its host
+
+- hosts: default
+
+  roles:
+    - { role: mail, become: true, become_user: root }

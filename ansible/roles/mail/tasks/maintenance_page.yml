@@ -1,0 +1,3 @@
+---
+- name: qmail_config
+  template: src=aliases.j2 dest=/etc/aliases

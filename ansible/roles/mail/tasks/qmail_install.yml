@@ -1,0 +1,18 @@
+---
+- name: install_qmail
+  apt:
+    pkg: [qmail]
+    state: present
+
+- name: nginx_started
+  service:
+    name: qmail
+    state: started
+
+- name: prep_qmail_tree ## move to common? ##c3w##
+  file:
+    path: "{{ qmail_dir }}"
+    state: directory
+    owner: "{{ qmail_owner }}"
+    group: "{{ qmail_owner }}"
+    mode: "{{ qmail_perms }}"

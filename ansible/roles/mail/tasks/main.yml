@@ -1,0 +1,4 @@
+---
+- include: qmail_install.yml
+- include: qmail_confs.yml
+- include: services.yml

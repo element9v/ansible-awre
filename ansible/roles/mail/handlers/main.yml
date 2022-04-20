@@ -1,0 +1,5 @@
+---
+- name: qmail_reload
+  service:
+    name: qmail
+    state: reloaded
